@@ -2,10 +2,11 @@ Summary:	PrBoom - a version of classic 3D shoot-em-up game
 Summary(pl):	PrBoom - wersja klasycznej strzelaniny 3D
 Name:		prboom
 Version:	2.2.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/prboom/%{name}-%{version}.tar.gz
+Source1:	http://freedoom.sourceforge.net/deutex/wads/doom2.wad.gz
 URL:		http://prboom.sourceforge.net/
 BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	SDL_mixer-devel >= 1.2.0
@@ -46,6 +47,10 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	gamesdir=%{_bindir}
+
+install %{SOURCE1}      $RPM_BUILD_ROOT%{_datadir}/games/doom
+gzip -d $RPM_BUILD_ROOT%{_datadir}/games/doom/doom2.wad.gz
+
 
 %clean
 rm -rf $RPM_BUILD_ROOT
