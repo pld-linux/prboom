@@ -1,22 +1,21 @@
 Summary:	PrBoom - a version of classic 3D shoot-em-up game
 Summary(pl):	PrBoom - wersja klasycznej strzelaniny 3D
 Name:		prboom
-Version:	2.2.3
-Release:	2
+Version:	2.3.0
+Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/prboom/%{name}-%{version}.tar.gz
-# Source0-md5: 91873942bbb7f0ee476b27b6baa62159
-Source1:	http://freedoom.sourceforge.net/deutex/wads/doom2.wad.gz
-# Source1-md5:	32610843ccad90028257595c3ca1a8a5
+# Source0-md5:	e18224379c9e19b12ad13c38b6d87904
+Patch0:		%{name}-datadir.patch
 URL:		http://prboom.sourceforge.net/
 BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	SDL_mixer-devel >= 1.2.0
 BuildRequires:	SDL_net-devel >= 1.2.0
-BuildRequires:	smpeg-devel
 BuildRequires:	autoconf
-Obsoletes:	lxdoom
+BuildRequires:	smpeg-devel
 Obsoletes:	lsdldoom
+Obsoletes:	lxdoom
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,6 +34,7 @@ Linux/SVGALib.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 %{__autoconf}
@@ -49,15 +49,12 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	gamesdir=%{_bindir}
 
-install %{SOURCE1}      $RPM_BUILD_ROOT%{_datadir}/games/doom
-gzip -d $RPM_BUILD_ROOT%{_datadir}/games/doom/doom2.wad.gz
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO doc/{*.txt,README*}
+%doc AUTHORS NEWS README TODO doc/{*.txt,README*}
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man[56]/*
 %{_datadir}/games/doom
