@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/prboom/%{name}-%{version}.tar.gz
+# Source0-md5: 91873942bbb7f0ee476b27b6baa62159
 Source1:	http://freedoom.sourceforge.net/deutex/wads/doom2.wad.gz
 URL:		http://prboom.sourceforge.net/
 BuildRequires:	SDL-devel >= 1.2.0
