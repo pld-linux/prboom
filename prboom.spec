@@ -1,13 +1,14 @@
 Summary:	PrBoom - a version of classic 3D shoot-em-up game
 Summary(pl):	PrBoom - wersja klasycznej strzelaniny 3D
 Name:		prboom
-Version:	2.3.0
-Release:	2
+Version:	2.3.1
+Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/prboom/%{name}-%{version}.tar.gz
-# Source0-md5:	e18224379c9e19b12ad13c38b6d87904
-Patch0:		%{name}-datadir.patch
+# Source0-md5:	c53231604fe6cf7352e73911ad44c90d
+Source1:	%{name}.desktop
+Source2:	%{name}.png
 URL:		http://prboom.sourceforge.net/
 BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	SDL_mixer-devel >= 1.2.0
@@ -35,7 +36,6 @@ Linux/SVGALib.
 
 %prep
 %setup -q
-%patch -p1
 
 %build
 cp -f /usr/share/automake/config.* autotools
@@ -47,9 +47,14 @@ cp -f /usr/share/automake/config.* autotools
 %install
 rm -rf $RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	gamesdir=%{_bindir}
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,3 +65,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man[56]/*
 %{_datadir}/games/doom
+%{_pixmapsdir}/%{name}.png
+%{_desktopdir}/%{name}.desktop
