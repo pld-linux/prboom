@@ -1,15 +1,15 @@
 Summary:	Doom - classic 3D shoot-em-up game
 Name:		prboom
 Version:	2.1.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Group(de):	X11/Aplikacje/Spiele
 Group(pl):	X11/Aplikacje/Gry
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/prboom/%{name}-%{version}-src.tar.gz
-BuildRequires:	SDL-devel >= 1.1.3
-BuildRequires:	SDL_mixer-devel
-BuildRequires:	SDL_net-devel
+BuildRequires:	SDL-devel >= 1.1.8
+BuildRequires:	SDL_mixer-devel >= 1.1.0
+BuildRequires:	SDL_net-devel >= 1.1.0
 BuildRequires:	smpeg-devel
 URL:		http://prboom.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
