@@ -8,11 +8,12 @@ Group:		X11/Applications/Games
 Group(de):	X11/Applikationen/Spiele
 Group(pl):	X11/Aplikacje/Gry
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/prboom/%{name}-%{version}.tar.gz
+URL:		http://prboom.sourceforge.net/
 BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	SDL_mixer-devel >= 1.2.0
 BuildRequires:	SDL_net-devel >= 1.2.0
 BuildRequires:	smpeg-devel
-URL:		http://prboom.sourceforge.net/
+BuildRequires:	autoconf
 Obsoletes:	lxdoom
 Obsoletes:	lsdldoom
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
