@@ -16,8 +16,6 @@ Obsoletes:	lxdoom
 Obsoletes:	lsdldoom
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 PrBoom is a version of the 3D shoot'em'up Doom, originally by Id
