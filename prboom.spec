@@ -5,8 +5,6 @@ Version:	2.2.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
-Group(de):	X11/Applikationen/Spiele
-Group(pl):	X11/Aplikacje/Gry
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/prboom/%{name}-%{version}.tar.gz
 URL:		http://prboom.sourceforge.net/
 BuildRequires:	SDL-devel >= 1.2.0
