@@ -37,7 +37,7 @@ Linux/SVGALib.
 %setup -q
 
 %build
-autoconf
+%{__autoconf}
 %configure \
 	--disable-cpu-opt
 %{__make}
