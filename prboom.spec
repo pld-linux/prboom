@@ -5,7 +5,7 @@ Version:	2.2.3
 Release:	2
 License:	GPL
 Group:		X11/Applications/Games
-Source0:	ftp://download.sourceforge.net/pub/sourceforge/prboom/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/prboom/%{name}-%{version}.tar.gz
 Source1:	http://freedoom.sourceforge.net/deutex/wads/doom2.wad.gz
 URL:		http://prboom.sourceforge.net/
 BuildRequires:	SDL-devel >= 1.2.0
@@ -16,7 +16,6 @@ BuildRequires:	autoconf
 Obsoletes:	lxdoom
 Obsoletes:	lsdldoom
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 PrBoom is a version of the 3D shoot'em'up Doom, originally by Id
@@ -50,7 +49,6 @@ rm -rf $RPM_BUILD_ROOT
 
 install %{SOURCE1}      $RPM_BUILD_ROOT%{_datadir}/games/doom
 gzip -d $RPM_BUILD_ROOT%{_datadir}/games/doom/doom2.wad.gz
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
