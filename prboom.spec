@@ -1,12 +1,12 @@
 Summary:	PrBoom - a version of classic 3D shoot-em-up game
 Summary(pl):	PrBoom - wersja klasycznej strzelaniny 3D
 Name:		prboom
-Version:	2.3.1
-Release:	1
+Version:	2.4.6
+Release:	0.1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/prboom/%{name}-%{version}.tar.gz
-# Source0-md5:	c53231604fe6cf7352e73911ad44c90d
+# Source0-md5:	0f60f3ad6a8dad5b2c6d4360f181ac22
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://prboom.sourceforge.net/
