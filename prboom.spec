@@ -1,5 +1,5 @@
 Summary:	PrBoom - a version of classic 3D shoot-em-up game
-Summary(pl):	PrBoom - wersja klasycznej strzelaniny 3D
+Summary(pl.UTF-8):   PrBoom - wersja klasycznej strzelaniny 3D
 Name:		prboom
 Version:	2.4.7
 Release:	1
@@ -28,11 +28,11 @@ software. It is based on Boom, a version of Doom adapted by TeamTNT
 meaning it can run on a variety of different systems, including
 Windows, X11, Linux/SVGALib.
 
-%description -l pl
-PrBoom jest wersj± strzelaniny 3D Doom, napisanej przez Id Software.
+%description -l pl.UTF-8
+PrBoom jest wersjÄ… strzelaniny 3D Doom, napisanej przez Id Software.
 Jest bazowana na Boom, wersji Doom zaadaptowanej przez TeamTNT
-(http://www.teamtnt.com/) pod DOS. PrBoom u¿ywa biblioteki SDL, co
-oznacza, ¿e mo¿e dzia³aæ na wielu systemach, w tym Windows, X11,
+(http://www.teamtnt.com/) pod DOS. PrBoom uÅ¼ywa biblioteki SDL, co
+oznacza, Å¼e moÅ¼e dziaÅ‚aÄ‡ na wielu systemach, w tym Windows, X11,
 Linux/SVGALib.
 
 %prep
