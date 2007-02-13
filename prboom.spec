@@ -1,5 +1,5 @@
 Summary:	PrBoom - a version of classic 3D shoot-em-up game
-Summary(pl.UTF-8):   PrBoom - wersja klasycznej strzelaniny 3D
+Summary(pl.UTF-8):	PrBoom - wersja klasycznej strzelaniny 3D
 Name:		prboom
 Version:	2.4.7
 Release:	1
