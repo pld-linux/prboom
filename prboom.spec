@@ -5,10 +5,11 @@ Version:	2.5.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/prboom/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/prboom/%{name}-%{version}.tar.gz
 # Source0-md5:	a8a15f61fa2626ab98051ab2703378c4
 Source1:	%{name}.desktop
 Source2:	%{name}.png
+Patch0:		%{name}-libpng.patch
 URL:		http://prboom.sourceforge.net/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	SDL-devel >= 1.2.0
@@ -28,6 +29,8 @@ software. It is based on Boom, a version of Doom adapted by TeamTNT
 meaning it can run on a variety of different systems, including
 Windows, X11, Linux/SVGALib.
 
+Note that some orignal game files are required to use prboom.
+
 %description -l pl.UTF-8
 PrBoom jest wersją strzelaniny 3D Doom, napisanej przez Id Software.
 Jest bazowana na Boom, wersji Doom zaadaptowanej przez TeamTNT
@@ -35,8 +38,11 @@ Jest bazowana na Boom, wersji Doom zaadaptowanej przez TeamTNT
 oznacza, że może działać na wielu systemach, w tym Windows, X11,
 Linux/SVGALib.
 
+Gra wymaga orygnalnych plików z gry do prawidłowego działania.
+
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 cp -f /usr/share/automake/config.* autotools
