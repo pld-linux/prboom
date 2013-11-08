@@ -2,7 +2,7 @@ Summary:	PrBoom - a version of classic 3D shoot-em-up game
 Summary(pl.UTF-8):	PrBoom - wersja klasycznej strzelaniny 3D
 Name:		prboom
 Version:	2.5.0
-Release:	3
+Release:	4
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://downloads.sourceforge.net/prboom/%{name}-%{version}.tar.gz
@@ -64,6 +64,8 @@ install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
+
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
