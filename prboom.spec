@@ -42,7 +42,7 @@ Gra wymaga orygnalnych plików z gry do prawidłowego działania.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 cp -f /usr/share/automake/config.* autotools
